@@ -18,3 +18,10 @@ def knight_moves_arr(start, finish)
     queue.delete_at 0
   end
 end
+
+def knight_moves(start, finish)
+  arr = knight_moves_arr(start, finish)
+  str = "You made it in #{arr.size} moves! Here's your path:\n"
+  arr.each { |move| str += "#{move}\n" }
+  str += finish.to_s
+end
